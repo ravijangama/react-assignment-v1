@@ -1,0 +1,32 @@
+.li-container {
+  list-style-type: none;
+  width: 80%;
+}
+.time-access {
+  color: #64748b;
+  font-weight: 700;
+  font-family: 'Roboto';
+  font-size: 12px;
+}
+.del-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-image {
+  height: 24px;
+  margin-right: 12px;
+}
+.title {
+  font-size: 12px;
+  font-family: 'Roboto';
+  color: #475569;
+  font-weight: 700;
+}
+.domain-url {
+  font-weight: lighter;
+}
