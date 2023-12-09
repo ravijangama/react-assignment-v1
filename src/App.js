@@ -97,6 +97,20 @@ class App extends Component {
     const searchResults = browsersList.filter(eachBrowser =>
       eachBrowser.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
+    let emptyHistory = ''
+    if (browsersList.length !== 0 && searchResults.length !== 0) {
+      emptyHistory = searchResults.map(eachBrowser => (
+        <BrowseItem
+          browserDetails={eachBrowser}
+          key={eachBrowser.id}
+          deleteItem={this.onDeleteHistory}
+        />
+      ))
+    } else {
+      emptyHistory = (
+        <p className="empty-history">There is no history to show</p>
+      )
+    }
     const jsxElement = (
       <div className="browser-bg-container">
         <div className="sub-bg-container">
@@ -125,13 +139,7 @@ class App extends Component {
             </div>
           </div>
           <ul className="ul-container">
-            {searchResults.map(eachBrowser => (
-              <BrowseItem
-                browserDetails={eachBrowser}
-                key={eachBrowser.id}
-                deleteItem={this.onDeleteHistory}
-              />
-            ))}
+            {emptyHistory}
           </ul>
         </div>
       </div>
