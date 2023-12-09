@@ -72,3 +72,9 @@ body {
   align-self: center;
   margin-top: 18px;
 }
+.empty-history {
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto';
+}
